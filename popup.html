@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Kapa Widget Injector</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        width: 300px;
+        padding: 12px;
+        font-size: 13px;
+      }
+      h1 {
+        font-size: 14px;
+        margin: 0 0 10px;
+      }
+      label {
+        display: block;
+        margin-top: 8px;
+        margin-bottom: 2px;
+        font-weight: 600;
+      }
+      input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 4px 6px;
+        font-size: 13px;
+      }
+      .checkbox-row {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        gap: 6px;
+      }
+      .checkbox-row label {
+        margin: 0;
+        font-weight: normal;
+      }
+      button {
+        width: 100%;
+        margin-top: 12px;
+        padding: 6px;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      #status {
+        margin-top: 8px;
+        min-height: 14px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kapa Widget Injector</h1>
+    <form id="widgetForm">
+      <label for="websiteId">Website ID (required)</label>
+      <input
+        type="text"
+        id="websiteId"
+        placeholder="e.g. dda86d37-a853-42f0-9578-f285be01246f"
+      />
+
+      <label for="projectName">Project name</label>
+      <input type="text" id="projectName" placeholder="e.g. Acme Docs" />
+
+      <label for="projectColor">Project color</label>
+      <input type="text" id="projectColor" placeholder="e.g. #FE5102" />
+
+      <label for="projectLogo">Project logo (URL)</label>
+      <input type="text" id="projectLogo" placeholder="https://example.com/logo.png" />
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="openByDefault" />
+        <label for="openByDefault">Open modal by default</label>
+      </div>
+
+      <button type="button" id="injectBtn">Inject on this page</button>
+      <div id="status"></div>
+    </form>
+    <script src="popup.js"></script>
+  </body>
+</html>
