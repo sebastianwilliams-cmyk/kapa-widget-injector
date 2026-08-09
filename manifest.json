@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Kapa Widget Injector",
+  "version": "1.0.0",
+  "description": "Inject the Kapa AI widget onto any webpage for live demos.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting", "storage"]
+}
